@@ -5,32 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="/manifest.json">
 
-    <script>
-        if ('serviceWorker' in navigator) {
-          window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/service-worker.js')
-              .then(registration => {
-                console.log('Service Worker registrado con éxito: ', registration);
-              })
-              .catch(error => {
-                console.log('Error al registrar el Service Worker: ', error);
-              });
-          });
-        }
-      </script>
+    
       
 </head>
 <body>
-    <div class="container">
-        <h1>Bienvenido</h1>
-        <p>Elija qué acción desea realizar:</p>
-        <button onclick="window.location.href='calculadora.html'">Ir a la Calculadora</button>
-        <p class="nota">Calcular la nota final basada en la firma y el puntaje del examen final.</p>
-        <button onclick="window.location.href='notadeseada.html'">Ir a nota deseada</button>
-        <p class="nota">Calcular cuanto necesito en el examen final para alcanzar cierta nota.</p>
+  <script>
+    // Función para poner la página en pantalla completa
+    function openFullscreen() {
+        const elem = document.documentElement; // Tomar el elemento HTML
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) { // Firefox
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) { // Chrome, Safari, Opera
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { // IE/Edge
+            elem.msRequestFullscreen();
+        }
+    }
 
-    </div>
+    // Intentar abrir en pantalla completa cuando se carga la página
+    window.onload = function() {
+        openFullscreen();
+    };
+</script>
+  <div class="container">
+      <h1>Bienvenido</h1>
+      <p>Elija qué acción desea realizar:</p>
+      <button onclick="window.location.href='calculadora.html'">Ir a la Calculadora</button>
+      <p class="nota">Calcular la nota final basada en la firma y el puntaje del examen final.</p>
+      <button onclick="window.location.href='notadeseada.html'">Ir a nota deseada</button>
+      <p class="nota">Calcular cuanto necesito en el examen final para alcanzar cierta nota.</p>
+
+  </div>
 </body>
 </html>
