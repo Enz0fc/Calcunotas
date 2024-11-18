@@ -10,26 +10,6 @@
       
 </head>
 <body>
-  <script>
-    // Función para poner la página en pantalla completa
-    function openFullscreen() {
-        const elem = document.documentElement; // Tomar el elemento HTML
-        if (elem.requestFullscreen) {
-            elem.requestFullscreen();
-        } else if (elem.mozRequestFullScreen) { // Firefox
-            elem.mozRequestFullScreen();
-        } else if (elem.webkitRequestFullscreen) { // Chrome, Safari, Opera
-            elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) { // IE/Edge
-            elem.msRequestFullscreen();
-        }
-    }
-
-    // Intentar abrir en pantalla completa cuando se carga la página
-    window.onload = function() {
-        openFullscreen();
-    };
-</script>
   <div class="container">
       <h1>Bienvenido</h1>
       <p>Elija qué acción desea realizar:</p>
