@@ -1,0 +1,17 @@
+{
+    "name": "Calculadora de notas",
+    "short_name": "Calcunotas",
+    "description": "Sirve para calcular la nota final o la nota requerida en el final para aprobar o quitar cierta calificacion",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4CAF50",
+    "icons": [
+      {
+        "src": "icono.png", 
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ]
+  }
+  

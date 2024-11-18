@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota deseada</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script>
+        function calcularNotaDeseada(event) {
+            event.preventDefault(); // Evita que el formulario recargue la página
+
+            // Obtener los valores de las casillas
+            document.getElementById("notita").textContent = '';
+            const firma = parseFloat(document.getElementById("firma").value) || 0;
+            const sacar2= (60-(0.4*firma))/0.6;
+            const sacar3= (71-(0.4*firma))/0.6;
+            const sacar4= (81-(0.4*firma))/0.6;
+            const sacar5= (91-(0.4*firma))/0.6;
+            document.getElementById("nota2").textContent = `Para obtener un 2, en el examen final sacar: ${sacar2.toFixed(2)}`;
+            document.getElementById("nota3").textContent = `Para obtener un 3, en el examen final sacar: ${sacar3.toFixed(2)}`;
+            document.getElementById("nota4").textContent = `Para obtener un 4, en el examen final sacar: ${sacar4.toFixed(2)}`;
+            document.getElementById("nota5").textContent = `Para obtener un 5, en el examen final sacar: ${sacar5.toFixed(2)}`;
+        }
+        function limpiarFormulario() {
+            document.getElementById("calculadoraForm").reset(); // Resetea los campos del formulario
+            document.getElementById('nota2').textContent='';
+            document.getElementById('nota3').textContent='';
+            document.getElementById('nota4').textContent='';
+            document.getElementById('nota5').textContent='';
+            document.getElementById('notita').textContent='Ingrese la calificacion obtenida en su firma y calcule cuanto necesita para cada nota';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Nota deseada</h1>
+        <form id="calculadoraForm">
+            <label for="num1">Firma:</label>
+            <input type="number" id="firma" name="num1" step="any" required>
+            
+            
+            <button type="submit">Calcular</button>
+            <button type="button" onclick="limpiarFormulario()">Limpiar</button>
+        </form>
+
+        <p id="notita">Ingrese la calificacion obtenida en su firma y calcule cuanto necesita para cada nota</p>
+        <div class="resultado">
+            <h3 id="nota2"></h3>
+            <h3 id="nota3"></h3>
+            <h3 id="nota4"></h3>
+            <h3 id="nota5"></h3>
+        </div>
+    </div>
+
+    <!-- Asocia el evento de clic al formulario -->
+    <script>
+        document.getElementById("calculadoraForm").addEventListener("submit", calcularNotaDeseada);
+    </script>
+    <button class="back-btn" onclick="window.history.back()">Volver</button>
+</body>
+</html>
