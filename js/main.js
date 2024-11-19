@@ -13,32 +13,32 @@ function calcularResultado(event) {
         alert('No se puede habiitar una final con firma menor a 50')
     }
     else if (num2<50){
-        document.getElementById("resultado").textContent = `Nota final: 1`;
-        document.getElementById("emoji").textContent = ':(';
+        document.getElementById("resultadoCal").textContent = `Nota final: 1`;
+        document.getElementById("emojiCal").textContent = ':(';
     }
     else if (resultado >= 90.50) {
-        document.getElementById("resultado").textContent = `Nota final: 5`;
-        document.getElementById("emoji").textContent = ';)';
+        document.getElementById("resultadoCal").textContent = `Nota final: 5`;
+        document.getElementById("emojiCal").textContent = ';)';
     } else if (resultado >= 80.50) {
-        document.getElementById("resultado").textContent = `Nota final: 4`;
-        document.getElementById("emoji").textContent = ':)';
+        document.getElementById("resultadoCal").textContent = `Nota final: 4`;
+        document.getElementById("emojiCal").textContent = ':)';
     } else if (resultado >= 70.50) {
-        document.getElementById("resultado").textContent = `Nota final: 3`;
-        document.getElementById("emoji").textContent = ':)';
+        document.getElementById("resultadoCal").textContent = `Nota final: 3`;
+        document.getElementById("emojiCal").textContent = ':)';
     } else if (resultado >= 59.50) {
-        document.getElementById("resultado").textContent = `Nota final: 2`;
-        document.getElementById("emoji").textContent = ':/';
+        document.getElementById("resultadoCal").textContent = `Nota final: 2`;
+        document.getElementById("emojiCal").textContent = ':/';
     } else {
-        document.getElementById("resultado").textContent = `Nota final: 1`;
-        document.getElementById("emoji").textContent = ':(';
+        document.getElementById("resultadoCal").textContent = `Nota final: 1`;
+        document.getElementById("emojiCal").textContent = ':(';
     }
 }
 
 // Función para limpiar en calculadora
-function limpiarFormulario() {
+function limpiarFormularioCal() {
     document.getElementById("calculadoraForm").reset(); 
-    document.getElementById("resultado").textContent = "Calcular nota final"; 
-    document.getElementById("emoji").textContent = "EXITOS!!"; 
+    document.getElementById('resultadoCal').textContent ='Calcular nota final'; 
+    document.getElementById('emojiCal').textContent ='EXITOS!!'; 
 }
 // funcion que calcula la nota deseada
 function calcularNotaDeseada(event) {
