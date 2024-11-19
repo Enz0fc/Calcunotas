@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
-
+    <script src="scripts.js"></script>
+<!--
     <script>
-        // Función para calcular el resultado basado en las entradas
+        // funcion que calcula el resultado
         function calcularResultado(event) {
             event.preventDefault(); // Evita que el formulario recargue la página
 
-            // Obtener los valores de las casillas
             const num1 = parseFloat(document.getElementById("num1").value) || 0;
             const num2 = parseFloat(document.getElementById("num2").value) || 0;
 
-            // Realizar el cálculo
-            const resultado = (num1 * 0.4) + (num2 * 0.6); // Ejemplo de ponderación
+            const resultado = (num1 * 0.4) + (num2 * 0.6); 
 
             if (resultado >= 90.50) {
                 document.getElementById("resultado").textContent = `Nota final: 5`;
@@ -36,13 +35,13 @@
             }
         }
 
-        // Función para limpiar los campos del formulario
+        // Función para limpiar
         function limpiarFormulario() {
-            document.getElementById("calculadoraForm").reset(); // Resetea los campos del formulario
-            document.getElementById("resultado").textContent = "Calcular nota final"; // Limpia el resultado
-            document.getElementById("emoji").textContent = "EXITOS!!"; // Limpia el emoji
+            document.getElementById("calculadoraForm").reset(); 
+            document.getElementById("resultado").textContent = "Calcular nota final"; 
+            document.getElementById("emoji").textContent = "EXITOS!!"; 
         }
-    </script>
+    </script> -->
 </head>
 <body>
     <div class="container">

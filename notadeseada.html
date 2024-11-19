@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nota deseada</title>
     <link rel="stylesheet" href="style.css">
-
+    <script src="scripts.js"></script>
+<!--
     <script>
+        // funcion que calcula la nota deseada
         function calcularNotaDeseada(event) {
             event.preventDefault(); // Evita que el formulario recargue la página
 
-            // Obtener los valores de las casillas
             document.getElementById("notita").textContent = '';
             const firma = parseFloat(document.getElementById("firma").value) || 0;
             const sacar2= (60-(0.4*firma))/0.6;
@@ -22,8 +23,9 @@
             document.getElementById("nota4").textContent = `Para obtener un 4, en el examen final sacar: ${sacar4.toFixed(2)}`;
             document.getElementById("nota5").textContent = `Para obtener un 5, en el examen final sacar: ${sacar5.toFixed(2)}`;
         }
+        //funcion para limpiar
         function limpiarFormulario() {
-            document.getElementById("calculadoraForm").reset(); // Resetea los campos del formulario
+            document.getElementById("calculadoraForm").reset(); 
             document.getElementById('nota2').textContent='';
             document.getElementById('nota3').textContent='';
             document.getElementById('nota4').textContent='';
@@ -31,6 +33,7 @@
             document.getElementById('notita').textContent='Ingrese la calificacion obtenida en su firma y calcule cuanto necesita para cada nota';
         }
     </script>
+-->
 </head>
 <body>
     <div class="container">
