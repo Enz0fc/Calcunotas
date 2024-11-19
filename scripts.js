@@ -1,12 +1,22 @@
 function calcularResultado(event) {
     event.preventDefault(); // Evita que el formulario recargue la página
 
-    const num1 = parseFloat(document.getElementById("num1").value) || 0;
-    const num2 = parseFloat(document.getElementById("num2").value) || 0;
+    const num1 = parseFloat(document.getElementById("num1").value) || 0; //nota firma
+    const num2 = parseFloat(document.getElementById("num2").value) || 0; //nota final
 
     const resultado = (num1 * 0.4) + (num2 * 0.6); 
 
-    if (resultado >= 90.50) {
+    if(num2>100 || num1>100){
+        alert('No se conseguir una nota promediada por encima de 100 en la firma o en el examen final')
+    }
+    else if (num1<50){
+        alert('No se puede habiitar una final con firma menor a 50')
+    }
+    else if (num2<50){
+        document.getElementById("resultado").textContent = `Nota final: 1`;
+        document.getElementById("emoji").textContent = ':(';
+    }
+    else if (resultado >= 90.50) {
         document.getElementById("resultado").textContent = `Nota final: 5`;
         document.getElementById("emoji").textContent = ';)';
     } else if (resultado >= 80.50) {
