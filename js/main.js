@@ -64,3 +64,33 @@ function limpiarFormulario() {
     document.getElementById('nota5').textContent='';
     document.getElementById('notita').textContent='Ingrese la calificacion obtenida en su firma y calcule cuanto necesita para cada nota';
 }
+function enviarSugerencia(event){
+    event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
+
+    const form = event.target; // El formulario
+    const formData = new FormData(form); // Crea un objeto con los datos del formulario
+
+    // Enviar los datos con fetch (AJAX)
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+        'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+        // Si el formulario se envió correctamente, muestra un mensaje de éxito
+        alert("¡Gracias por tu sugerencia! Se ha enviado correctamente.");
+        form.reset(); // Resetea el formulario
+        } else {
+        // Si hubo un error, muestra un mensaje de error
+        alert("Hubo un problema al enviar tu sugerencia. Intenta nuevamente.");
+        }
+    })
+    .catch(() => {
+        // En caso de error en la conexión, muestra un mensaje
+        alert("Ocurrió un problema con el envío. Por favor, inténtalo más tarde.");
+    });
+}
+

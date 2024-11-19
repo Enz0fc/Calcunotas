@@ -74,3 +74,74 @@ button:hover {
     background-color: #218838;
     position: fixed;
 }
+.sugerencias-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    font-size: 16px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.sugerencias-btn:hover {
+    background-color: #218838;
+    position: fixed;
+}
+textarea {
+    width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
+    height: 200px; /* Aumenta la altura del área de texto */
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical; /* Permite cambiar el tamaño verticalmente */
+    transition: border-color 0.3s ease;
+  }
+  textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+    /* Estilo del mensaje de confirmación */
+    #mensajeConfirmacion {
+        display: none;
+        background-color: #d4edda;
+        padding: 15px;
+        border-radius: 5px;
+        color: #155724;
+        font-size: 18px;
+        margin-top: 20px;
+      }
+    
+      /* Estilo de pantallas pequeñas */
+      @media (max-width: 600px) {
+        form {
+          padding: 20px;
+          max-width: 90%; /* Formulario más pequeño en pantallas pequeñas */
+        }
+    
+        textarea {
+          height: 150px; /* Menor altura en pantallas pequeñas */
+        }
+    
+        button {
+          padding: 10px 20px;
+        }
+      }
+    
+      /* Estilo para pantallas más grandes */
+      @media (min-width: 601px) {
+        form {
+          padding: 40px;
+        }
+    
+        textarea {
+          height: 220px; /* Mayor altura en pantallas grandes */
+        }
+    
+        button {
+          padding: 15px 30px;
+        }
+      }

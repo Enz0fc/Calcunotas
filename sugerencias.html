@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="js/main.js"></script>
+    <title>Sugerencias</title>
+</head>
+<body>
+    <form id="sugerenciasForm" action="https://formspree.io/f/xeoqzgwe" method="POST">
+        <label for="mensaje">Tu sugerencia:</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu sugerencia aquí" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      
+      <!-- Mensaje de confirmación -->
+      <div id="mensajeConfirmacion" style="display: none;">
+        ¡Gracias por tu sugerencia! Ha sido enviada correctamente.
+      </div>
+      
+      <!--Asociar el boton al evento-->
+      <script>
+        document.getElementById("sugerenciasForm").addEventListener("submit", enviarSugerencia);
+    </script>
+    <button class="back-btn" onclick="window.history.back()">Volver</button>
+</body>
+</html>
